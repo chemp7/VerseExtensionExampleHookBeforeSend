@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>送信前確認</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="message">送信先の確認</h1>
+      <hr id="hr-top">
+    </div>
+    <table class="address">
+      <tr>
+        <td class="colLabel">
+          <span class="label">宛先:</span>
+        </td>
+        <td>
+          <div id="to"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="colLabel">
+          <span class="label">Cc:</span>
+        </td>
+        <td>
+          <div id="cc"></div>
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table class="address">
+      <tr>
+        <td class="colLabel">
+          <span class="label">件名:</span>
+        </td>
+        <td>
+          <div id="subject"></div>
+        </td>
+      </tr>
+    </table>
+
+    <pre id='json'></pre>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

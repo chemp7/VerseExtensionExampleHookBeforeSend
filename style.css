@@ -1,0 +1,85 @@
+form{ margin:0; }
+body {
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    color: #545454;
+}
+.message {
+    width: 100%;
+    text-align: center;
+}
+.information {
+    padding-left: 55px;
+    font-weight: bold;
+}
+hr{
+    border-top: 1px solid #d4d4d4;
+}
+/*
+Label: 宛先, Cc
+*/
+table.address td.colLabel{
+    vertical-align:top;
+}
+table.address span.label{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*
+EmailAddress
+*/
+.internalLabel{
+    padding: 3px;
+    margin-right: 10px;
+    display:inline-block;
+    background-color: #f4f4f4;
+}
+.externalLabel{
+    padding: 3px;
+    margin-right: 10px;
+    display:inline-block;
+    background-color: #ffea82;
+}
+.externalLabel:hover{
+    background-color: #ffd930;
+}
+
+.checkbox-input{
+    display: none;
+}
+.checkbox-span{
+    padding-left: 20px;
+    position:relative;
+    margin-right: 0px;
+    font-weight: bold;
+}
+.checkbox-span::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #848484;
+}
+.checkbox-input:checked + .checkbox-span::before{
+    background-color: #848484;
+}
+.checkbox-input:checked + .checkbox-span:hover::before{
+    background-color: #4479bb;
+}
+.checkbox-input:checked + .checkbox-span{
+    font-weight: normal;
+}
+.checkbox-input:checked + .checkbox-span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 2px;
+    height: 7px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+}
