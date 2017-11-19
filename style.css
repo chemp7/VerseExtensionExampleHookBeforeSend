@@ -1,8 +1,36 @@
-form{ margin:0; }
+form{
+    margin:0;
+}
+
 body {
-    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
     color: #545454;
 }
+
+html:before,
+html:after,
+body:before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 8px solid #4479bc;
+} 
+html:after {
+    z-index: 10;
+    top: auto;
+    border-width:0 0 8px;
+} 
+body:before {
+    z-index: 10;
+    bottom: auto;
+    border-width: 8px 0 0;
+}
+
 .message {
     width: 100%;
     text-align: center;
@@ -11,11 +39,23 @@ body {
     padding-left: 55px;
     font-weight: bold;
 }
+div.colLabel {
+    display: table-cell;
+    width: 45px;
+    padding-left: 10px;
+}
+div.colValue {
+    display: table-cell;
+}
 hr{
-    border-top: 1px solid #d4d4d4;
+    overflow: none;
+    border:none;
+    border-top:solid 1px #d4d4d4;
+    height:1px;
+    margin: 0 5;
 }
 /*
-Label: 宛先, Cc
+Label: 宛先, Cc, Bcc
 */
 table.address td.colLabel{
     vertical-align:top;
@@ -33,8 +73,17 @@ EmailAddress
     display:inline-block;
     background-color: #f4f4f4;
 }
+.externalLabel_confirmed{
+    padding: 6px;
+    margin-right: 10px;
+    display:inline-block;
+    background-color: #c9d1db;
+}
+.externalLabel_confirmed:hover{
+    background-color: #b0c4de;
+}
 .externalLabel{
-    padding: 3px;
+    padding: 6px;
     margin-right: 10px;
     display:inline-block;
     background-color: #ffea82;
@@ -47,20 +96,11 @@ EmailAddress
     display: none;
 }
 .checkbox-span{
-    padding-left: 20px;
+/*    padding-left: 20px;*/
+    padding: 6px;
     position:relative;
     margin-right: 0px;
-    font-weight: bold;
-}
-.checkbox-span::before{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #848484;
+/*    font-weight: bold;*/
 }
 .checkbox-input:checked + .checkbox-span::before{
     background-color: #848484;
@@ -68,18 +108,63 @@ EmailAddress
 .checkbox-input:checked + .checkbox-span:hover::before{
     background-color: #4479bb;
 }
+/*
 .checkbox-input:checked + .checkbox-span{
     font-weight: normal;
 }
-.checkbox-input:checked + .checkbox-span::after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 3px;
-    left: 7px;
-    width: 2px;
-    height: 7px;
-    transform: rotate(45deg);
-    border-bottom: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
+*/
+
+/* JSON Data */
+.jsonArea {
+    margin: 10px;
+}
+
+/* JSON Data: label */
+.jsonArea label {
+    color: #848484;
+    cursor :pointer;
+/*    font-size: 9px;*/
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+    border-bottom: 1px solid #848484;
+}
+
+.jsonArea label:hover {
+    color: #545454;
+    border-bottom: 1px solid #545454;
+}
+
+/* JSON Data: checkbox */
+.jsonArea input {
+    display: none;
+}
+
+/* JSON Data: div */
+.jsonArea .jsonDiv {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+    border: 1px solid #545454;
+    background: #f4f4f4;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* JSON Data: checkbox:checked*/
+.jsonArea input:checked ~ .jsonDiv {
+    height: auto;
+    opacity: 1;
+    color: #545454;
+}
+.jsonArea input:checked + label {
+    color: #4479bc;
+    border-bottom: none;
+}
+
+pre {
+    margin: 6px;
+    padding: 0px 10px 10px;
+/*    font-size: 9px;*/
 }

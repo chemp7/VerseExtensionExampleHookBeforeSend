@@ -11,39 +11,49 @@
       <h1 class="message">送信先の確認</h1>
       <hr id="hr-top">
     </div>
-    <table class="address">
-      <tr>
-        <td class="colLabel">
-          <span class="label">宛先:</span>
-        </td>
-        <td>
-          <div id="to"></div>
-        </td>
-      </tr>
-      <tr>
-        <td class="colLabel">
-          <span class="label">Cc:</span>
-        </td>
-        <td>
-          <div id="cc"></div>
-        </td>
-      </tr>
-    </table>
+
+    <div class="colParent">
+      <div class="colLabel">宛先:</div>
+      <div class="colValue" id="To"></div>
+    </div>
 
     <hr>
 
-    <table class="address">
-      <tr>
-        <td class="colLabel">
-          <span class="label">件名:</span>
-        </td>
-        <td>
-          <div id="subject"></div>
-        </td>
-      </tr>
-    </table>
+    <div class="colParent">
+      <div class="colLabel">Cc:</div>
+      <div class="colValue" id="CC"></div>
+    </div>
 
-    <pre id='json'></pre>
+    <hr>
+
+    <div class="colParent">
+      <div class="colLabel">Bcc:</div>
+      <div class="colValue" id="Bcc"></div>
+    </div>
+
+    <hr>
+
+    <div class="colParent">
+      <div class="colLabel">件名:</div>
+      <div class="colValue" id="Subject"></div>
+    </div>
+
+    <hr>
+
+    <div class="colParent">
+      <div class="colLabel">添付:</div>
+      <div class="colValue" id="Attachments"></div>
+    </div>
+  
+    <hr>
+  
+    <div class="jsonArea">
+      <input type="checkbox" id="jsonCheckbox" />
+      <label for="jsonCheckbox">Message data</label>
+      <div class="jsonDiv">
+        <pre id='json'></pre>
+      </div>
+    </div>
 
     <script type="text/javascript" src="script.js"></script>
   </body>
