@@ -2,19 +2,19 @@
   "extensions": [
     {
       "ext_id": "com.ibm.verse.ext.hookbeforesend.example001",
-      "application": "My app 1105",
+      "application": "My app 11-19-2017",
       "payload": {
         "disableSend": true,
-        "url": "https://yourserver.co.jp/verse/hook-before-send/index.html"
+        "url": "https://chemp7.github.io/VerseExtensionExampleHookBeforeSend/index.html"
       },
-      "name": "name 1105",
+      "name": "Name 11-19-2017",
       "description": "\u9001\u4fe1\u524d\u306e\u6700\u7d42\u78ba\u8a8d\u3067\u3059\u3002",
       "type": "com.ibm.verse.ext.beforeOnSend",
       "title": "\u9001\u4fe1\u524d\u78ba\u8a8d"
     }
   ],
   "icon": "",
-  "name": "My app 1105",
+  "name": "My app 11-19-2017",
   "description": "\u9001\u4fe1\u524d\u306e\u6700\u7d42\u78ba\u8a8d\u3067\u3059\u3002",
   "entitlement": "",
   "services": [

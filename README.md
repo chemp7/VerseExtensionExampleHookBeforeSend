@@ -26,6 +26,7 @@ To add an application to Verse on-Cloud, you need to register it using the IBM A
 You can modify the application.json file and register it.
 
 Please confirm on the official website how to register the application to Verse.
+
 https://ibmverse.github.io/verse-developer/developers/#registering-an-application-in-ibm-verse
 
 ## Licence
