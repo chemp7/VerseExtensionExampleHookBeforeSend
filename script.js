@@ -89,7 +89,8 @@
       var nameInput = document.createElement("input");
       var nameLabel = document.createElement("label");
       var nameSpan = document.createElement("span");
-      if (value.emailAddress.slice(-(domain.length)) === domain) {
+      var deliveryDomain = value.emailAddress.substr(value.emailAddress.lastIndexOf("@") + 1);
+      if (deliveryDomain === domain) {
         externalFlag = false;
       } else {
         externalFlag = true;
